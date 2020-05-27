@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+<div class="fundo">
+  {% if alert %}
+    <div class="alert alert-warning" role="alert">
+    {{ alert }}
+    </div>
+  {% endif %}
+  <div class="centro">
+    This is a simple site that allow users to write reviews and rate books,<br>
+    they can also check the rating that users from GoodReads had given<br><br>
+    <a href="{{ url_for('login') }}"><button type="button" class="btn btn-dark" name="button"> Log In </button></a>
+    <a href="{{ url_for('register') }}"><button type="button" class="btn btn-dark" name="button"> Register </button></a>
+</div>
+{% endblock %}

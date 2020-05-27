@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class = "pinguim2">
+</div>
+<div class = "centro">
+  You can get the json file by searching the ISBN number or by putting http://127.0.0.1:5000/api/isbnnumber on your web browser<br><br>
+  <form method="post">
+    <input type="text" name="api" placeholder="ISBN number"> <br>
+    <button type="submit" class="btn btn-outline-primary" style = "position: relative; margin-top: 10px;">Submit</button>
+  </form>
+</div>
+
+{% endblock %}

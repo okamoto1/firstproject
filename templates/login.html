@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="centro">
+  <h5> Log In </h5>
+  {% if senha == "red" %}
+    <div style = "color:{{senha}}">Senha incorreta</div>
+  {% elif usuario == "red" %}
+    <div style = "color:{{usuario}}">Usuário incorreto</div>
+  {% endif %}
+  <form method="post">
+    <label for="user" style = "color:{{usuario}}">User:</label><br>
+    <input type="text" name="user" placeholder="USER ID" id ={{usuario}}><br>
+    <label for="password" style="color:{{senha}}">Password:</label><br>
+    <input type="password" name="password" placeholder="PASSWORD" id ={{senha}}><br>
+    <button type="submit" class="btn btn-outline-primary" style = "position: relative; margin-top: 10px;">Submit</button>
+  </form>
+</div>
+{% endblock %}

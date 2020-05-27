@@ -1,0 +1,135 @@
+body{
+  background-color: #cccccc;
+  color: white
+}
+
+.pinguim2{
+  background-image: url("img/55228488_220x220.png");
+  background-color: #cccccc;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:94vh;
+  top: 20%;
+  right: 3%;
+  position: relative;
+}
+
+.achou{
+  background-image: url("img/animalface_penguin.png");
+  height:32vh;
+  text-align: center;
+  background-position: center;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.over{
+  position: relative;
+  top: 20%;
+  left: 37.5%;
+  text-align: center;
+  width: 25%;
+}
+.fundo{
+  background-image: url("img/animal_mark13_penguin.png");
+  background-color: #cccccc;
+  height:94vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+
+.pinguim{
+  background-image: url("img/penguin.png");
+  background-color: #cccccc;
+  height:94vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.sucess{
+  padding-top: 8px;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid white;
+  width: 400px;
+  height: 65px;
+}
+
+.centro{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* taking from https://www.youtube.com/watch?v=Ep78KjstQuw */
+.rating {
+  position: relative;
+  right: 70%;
+  display: flex;
+  transform: rotateY(180deg);
+}
+
+.rating input{
+  display: none;
+}
+
+.rating label{
+  display: block;
+  cursor: pointer;
+  width: 40px;
+}
+
+.rating label:before {
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display:block;
+  color: #101010;
+  font-size: 40px;
+}
+
+.rating label:after {
+  content: '\f005';
+  font-size: 40px;
+  font-family: fontAwesome;
+  position: relative;
+  display:block;
+  margin-top: -60px;
+  color: #ffecb3;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after {
+  transform: rotateY(10deg);
+  opacity: 1;
+}
+
+
+#box{
+  padding-top: 12px;
+  width: 100%;
+  color: black;
+  padding-bottom: 12px;
+  border-left: 6px solid #e6faff;
+  border-right: 6px solid #e6faff;
+  background-color: #ffffe6
+}
+
+
+input[type=text], input[type=password]{
+  border-radius: 4.5px;
+}
+
+
+#red{
+  border: 2px solid red;
+  border-radius: 4px;
+}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class= "centro">
+  <h5> Sign Up </h5>
+  {% if message1 == '2' %}
+    Algum dos campos esta vazio<br>
+  {% elif message1 == '1' %}
+    Usuário já esta sendo utilizado
+  {% endif %}
+  <form method="post">
+    <label for="user">User:</label><br>
+    <input type="text" name="user" placeholder="USER ID" id={{usuario}}> <br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" placeholder="PASSWORD" id={{senha}}> <br>
+    <button type="submit" class="btn btn-outline-primary" style = "position: relative; margin-top: 10px;">Submit</button>
+  </form>
+</div>
+{% endblock %}

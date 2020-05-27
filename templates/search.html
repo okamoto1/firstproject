@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% if not este and not este1 and not este2 %}
+<div class="centro">
+  <img src="{{ url_for('static', filename='img/animalface_penguin.png') }}" >
+  {% else %}
+    <div class="achou" >
+  {% endif %}
+  <form method="POST">
+    <label for="search">Put the title, isbn or author of a book right bellow:</label><br>
+    <input type="text" name="search" placeholder="SEARCH">
+    <button type="submit" name="button" class="btn btn-outline-primary"> Find It</button>
+  </form>
+  </div>
+
+  <div class = 'over'>
+    {{ message }}
+    <div class="list-group">
+      {% for i in este %}
+        <a href="{{ url_for('books', titulo = i.title) }}" class="list-group-item list-group-item-action list-group-item-primary">{{ i.title }}</a>
+      {% endfor %}
+      {% for i in este1 %}
+        <a href="{{ url_for('books', titulo = i.title) }}" class="list-group-item list-group-item-action list-group-item-primary">{{ i.title }}</a>
+      {% endfor %}
+      {% for i in este2 %}
+        <a href="{{ url_for('books', titulo = i.title) }}" class="list-group-item list-group-item-action list-group-item-primary">{{ i.title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
